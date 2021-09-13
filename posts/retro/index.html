@@ -1702,7 +1702,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 <p>Haciendo una busqueda mas exhaustiva, vemos una potencial contraseña: "parzival". Probamos si el servidor worpress tiene el wp-config.php por defecto, en efecto hay un panel de login. Sin embargo no nos deja hacer mucho, probamos conectarnos por de RDP a través de remmina.</p>
 <p><img src="/images/posts/thm/retro/Screenshot_20200213_171656.webp" alt="image" /></p>
 <h1 id="rdp---user">RDP - User</h1>
-<p>Consideramos que &lsquo;parzival&rsquo; es una contraseña del usuario wade, utilizamos el servicio RDP de la maquina para utilizar esta informacion. Utilizamos remmina para conectarnos a la maquina. Obtenemos nuestra flag <strong>user.txt</strong>.</p>
+<p>Consideramos que &lsquo;parzival&rsquo; es una contraseña del usuario wade, utilizamos el servicio RDP de la maquina para utilizar esta informacion. Usamos remmina para conectarnos a la maquina vía RDP. Obtenemos nuestra flag <strong>user.txt</strong>.</p>
 <p><img src="/images/posts/thm/retro/Screenshot_20200213_171945.webp" alt="image" /></p>
 <h1 id="privilege-escalation">PRIVILEGE ESCALATION</h1>
 <p>Enumeramos la maquina y vemos en el historial un CVE que el usuario estuvo buscando ademas de eso un archivo en la papelera de reciclaje. Investigamos que podria ser este archivo y encontramos que es utilizado para obtener privilegios de administracion en el <code>CVE-2019-1388</code>.</p>
