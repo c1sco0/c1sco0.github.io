@@ -554,9 +554,9 @@
 
   
     
-    var baseurl = JSON.parse("\"https://sckull.github.io/\"");
+    var baseurl = JSON.parse("\"https://c1sco0.github.io/\"");
     
-    var permalink = JSON.parse("\"https://sckull.github.io/posts/retro/\"");
+    var permalink = JSON.parse("\"https://c1sco0.github.io/posts/retro/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1238,21 +1238,21 @@
 <meta name="modified" content="2020-02-15T00:00:00&#43;0000">
 <meta property="article:published_time" content="2020-02-15T00:00:00&#43;0000">
 
-<meta name="author" content="sckull">
-<meta property="article:author" content="https://sckull.github.io/posts/retro/@sckull">
+<meta name="author" content="c1sco0">
+<meta property="article:author" content="https://c1sco0.github.io/posts/retro/@c1sco0">
 
 
-<meta property="og:site_name" content="sckull">
+<meta property="og:site_name" content="c1sco0">
 <meta property="og:title" content="TryHackMe - Retro">
-<meta property="og:url" content="https://sckull.github.io/posts/retro/">
+<meta property="og:url" content="https://c1sco0.github.io/posts/retro/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Retro es una maquina de TryHackMe con Sistem Windows expone RDP por donde ingresamos con credenciales en comentarios de WordPress. Obtuvimos acceso privilegiado con informacion que encontramos en el historial de Chrome.">
 
   
-    <meta property="og:image" content="https://sckull.github.io/images/posts/thm/retro/cover.webp">
-    <meta property="og:image:url" content="https://sckull.github.io/images/posts/thm/retro/cover.webp">
+    <meta property="og:image" content="https://c1sco0.github.io/images/posts/thm/retro/cover.webp">
+    <meta property="og:image:url" content="https://c1sco0.github.io/images/posts/thm/retro/cover.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:app:name:iphone" content="sckull">
+    <meta name="twitter:app:name:iphone" content="c1sco0">
     <meta property="twitter:title" content="TryHackMe - Retro">
     <meta property="twitter:description" content="Retro es una maquina de TryHackMe con Sistem Windows expone RDP por donde ingresamos con credenciales en comentarios de WordPress. Obtuvimos acceso privilegiado con informacion que encontramos en el historial de Chrome.">
   
@@ -1266,7 +1266,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#1d1d1d">
 
-<link rel="canonical" href="https://sckull.github.io/posts/retro/">
+<link rel="canonical" href="https://c1sco0.github.io/posts/retro/">
 
 
 
@@ -1283,22 +1283,22 @@
     "headline": "TryHackMe - Retro",
     "datePublished": "2020-02-15T00:00:00Z",
     "dateModified": "2020-02-15T00:00:00Z",
-    "url" : "https://sckull.github.io/posts/retro/",
+    "url" : "https://c1sco0.github.io/posts/retro/",
     "description": "Retro es una maquina de TryHackMe con Sistem Windows expone RDP por donde ingresamos con credenciales en comentarios de WordPress. Obtuvimos acceso privilegiado con informacion que encontramos en el historial de Chrome.",
     "keywords": ["rdp"],
-    "image" : "https://sckull.github.io/images/posts/thm/retro/cover.webp",
+    "image" : "https://c1sco0.github.io/images/posts/thm/retro/cover.webp",
     "author": {
       "@type": "Person",
-      "name": "sckull"
+      "name": "c1sco0"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://sckull.github.io/"
+      "@id": "https://c1sco0.github.io/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "sckull",
-      "url": "https://sckull.github.io/"
+      "name": "c1sco0",
+      "url": "https://c1sco0.github.io/"
     }
   }
 </script>
@@ -1353,7 +1353,7 @@
     
     
       <a href="/" title="Home" rel="home" class="navbar__title-link">
-        <h6 class="navbar__title">&gt; sckull<span class="logo__cursor"></span> </h6>
+        <h6 class="navbar__title">&gt; c1sco0<span class="logo__cursor"></span> </h6>
       </a>
       
       <a class="navbar__title-link" style="margin-left: 5px;">
@@ -1591,7 +1591,7 @@
   🏷️
   
 
-  <li><a href="https://sckull.github.io/tags/rdp/" class="single__tag" title="rdp">rdp</a></li>
+  <li><a href="https://c1sco0.github.io/tags/rdp/" class="single__tag" title="rdp">rdp</a></li>
   
 
 </ul>
@@ -1687,7 +1687,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 </code></pre></td></tr></table>
 </div>
 </div><h1 id="http">HTTP</h1>
-<h2 id="gobuster">GOBUSTER</h2>
+<h2 id="wfuzz">WFUZZ</h2>
 <p>Utilizamos wfuzz para buscar directorios en el servidor web.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1699,7 +1699,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="retro">/retro</h3>
-<p>Haciendo una busqueda mas exhaustiva, vemos una potencial contraseña: "parzival". Probamos si el servidor worpress tiene el wp-config.php por defecto, en efecto hay un panel de login. Sin embargo no nos deja hacer mucho, probamos conectarnos por de RDP a través de remmina</p>
+<p>Haciendo una busqueda mas exhaustiva, vemos una potencial contraseña: "parzival". Probamos si el servidor worpress tiene el wp-config.php por defecto, en efecto hay un panel de login. Sin embargo no nos deja hacer mucho, probamos conectarnos por de RDP a través de remmina.</p>
 <p><img src="/images/posts/thm/retro/Screenshot_20200213_171656.webp" alt="image" /></p>
 <h1 id="rdp---user">RDP - User</h1>
 <p>Consideramos que &lsquo;parzival&rsquo; es una contraseña del usuario wade, utilizamos el servicio RDP de la maquina para utilizar esta informacion. Utilizamos remmina para conectarnos a la maquina. Obtenemos nuestra flag <strong>user.txt</strong>.</p>
@@ -1780,19 +1780,19 @@ Service detection performed. Please report any incorrect results at https://nmap
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsckull.github.io%2fposts%2fretro%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fc1sco0.github.io%2fposts%2fretro%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fsckull.github.io%2fposts%2fretro%2f&title=TryHackMe%20-%20Retro &summary=Retro%20es%20una%20maquina%20de%20TryHackMe%20con%20Sistem%20Windows%20expone%20RDP%20por%20donde%20ingresamos%20con%20credenciales%20en%20comentarios%20de%20WordPress.%20Obtuvimos%20acceso%20privilegiado%20con%20informacion%20que%20encontramos%20en%20el%20historial%20de%20Chrome.&source=Walkthrough%20-%20Writeups%20%3a%3a%20TryHackMe%2c%20HackTheBox%2c%20CTFs%2c%20espa%c3%b1ol" target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fc1sco0.github.io%2fposts%2fretro%2f&title=TryHackMe%20-%20Retro &summary=Retro%20es%20una%20maquina%20de%20TryHackMe%20con%20Sistem%20Windows%20expone%20RDP%20por%20donde%20ingresamos%20con%20credenciales%20en%20comentarios%20de%20WordPress.%20Obtuvimos%20acceso%20privilegiado%20con%20informacion%20que%20encontramos%20en%20el%20historial%20de%20Chrome.&source=Walkthrough%20-%20Writeups%20%3a%3a%20TryHackMe%2c%20HackTheBox%2c%20CTFs%2c%20espa%c3%b1ol" target="_blank" rel="noreferer" title="LinkedIn" aria-label="LinkedIn Share Button" class="donation__item" data-type="share">
           <svg data-name="linkedin" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=TryHackMe%20-%20Retro&url=https%3a%2f%2fsckull.github.io%2fposts%2fretro%2f&hashtags=rdp&via=sckull" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=TryHackMe%20-%20Retro&url=https%3a%2f%2fc1sco0.github.io%2fposts%2fretro%2f&hashtags=rdp&via=sckull" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -1819,7 +1819,7 @@ Service detection performed. Please report any incorrect results at https://nmap
     </div>
     <div class="whoami__title">
       
-        sckull
+        c1sco0
       
     </div>
     <div class="whoami__desc">
@@ -1836,7 +1836,7 @@ Service detection performed. Please report any incorrect results at https://nmap
       
       
       
-      <a href="https://github.com/sckull" title="github" aria-label="github">
+      <a href="https://github.com/c1sco0" title="github" aria-label="github">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 24 24" version="1.1">
 <g id="surface3680">
 <path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562 "/>
@@ -1928,7 +1928,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 <nav class="pagination-single">
   
     
-      <a href="https://sckull.github.io/posts/ctf_collection_vol2/" class="pagination-single__left">
+      <a href="https://c1sco0.github.io/posts/ctf_collection_vol2/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
@@ -1937,7 +1937,7 @@ Service detection performed. Please report any incorrect results at https://nmap
     
     <div class="grow"></div>
     
-      <a href="https://sckull.github.io/posts/cmess/" class="pagination-single__right">      
+      <a href="https://c1sco0github.io/posts/cmess/" class="pagination-single__right">      
         <div class="pagination-single__right-title">TryHackMe - CMesS</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
@@ -3022,7 +3022,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   
     
-      <a href="https://sckull.github.io/posts//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+      <a href="https://c1sco0.github.io/posts//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
       </a>
     
@@ -3104,7 +3104,7 @@ var a = document.getElementsByClassName('navbar__menu-item')
     <li><a href="#nmap">NMAP</a></li>
     <li><a href="#http">HTTP</a>
       <ul>
-        <li><a href="#gobuster">GOBUSTER</a>
+        <li><a href="#wfuzz">WFUZZ</a>
           <ul>
             <li><a href="#retro">/retro</a></li>
           </ul>
