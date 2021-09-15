@@ -1780,8 +1780,8 @@ PORT      STATE SERVICE VERSION
 </div><h2 id="http">HTTP</h2>
 <p>Encontramos una pagina estatica en el puerto 80, logramos ver el dominio <code>schooled.htb</code> en el footer de la pagina el cual agregamos a <code>/etc/hosts</code>.<br />
 <img src="/images/posts/htb/schooled/Screenshot_1.png" alt="image" /></p>
-<h2 id="gobuster">GOBUSTER</h2>
-<p>Utilizamos gobuster para busqueda de directorios y archivos, pero solo encontramos las direcciones que se muestran en la pagina.</p>
+<h2 id="nmap">NMAP</h2>
+<p>Utilizamos el script http-enum de nmap para buscar directorios y archivos, pero solo encontramos las direcciones que se muestran en la pagina.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1794,16 +1794,19 @@ PORT      STATE SERVICE VERSION
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># gobuster dir -u http://schooled.htb/ -w directory-list-2.3-medium.txt -x php,html,txt,yaml,bak -q -t 50</span>
-/images <span class="o">(</span>Status: 301<span class="o">)</span>
-/contact.html <span class="o">(</span>Status: 200<span class="o">)</span>
-/about.html <span class="o">(</span>Status: 200<span class="o">)</span>
-/css <span class="o">(</span>Status: 301<span class="o">)</span>
-/js <span class="o">(</span>Status: 301<span class="o">)</span>
-/fonts <span class="o">(</span>Status: 301<span class="o">)</span>
-/teachers.html <span class="o">(</span>Status: 200<span class="o">)</span>
-</code></pre></td></tr></table>
-</div>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Nmap 7.92 scan initiated Wed Sep 15 08:39:59 2021 as: nmap --script http-enum -p80 -n -oN webScan 10.10.10.234
+Nmap scan report for 10.10.10.234
+Host is up (0.36s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-enum: 
+|   /css/: Potentially interesting folder w/ directory listing
+|   /images/: Potentially interesting folder w/ directory listing
+|_  /js/: Potentially interesting folder w/ directory listing
+
+# Nmap done at Wed Sep 15 08:40:37 2021 -- 1 IP address (1 host up) scanned in 37.81 seconds
+</span>
 </div><p>Vemos en la pagina <code>/teachers.html</code> varios nombres y apellidos, lo cual podria servir para crear un diccionario de usuarios y/o contraseñas.<br />
 <img src="/images/posts/htb/schooled/Screenshot_3.png" alt="image" /></p>
 <p>Tambien encontramos informacion importante, mencionan que proveen educacion online en la plataforma Moodle, pero, no encontramos ninguna direccion a moodle con gobuster.<br />
