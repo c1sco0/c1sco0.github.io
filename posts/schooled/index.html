@@ -1797,14 +1797,15 @@ PORT      STATE SERVICE VERSION
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Nmap 7.92 scan initiated Wed Sep 15 08:39:59 2021 as: nmap --script http-enum -p80 -n -oN webScan 10.10.10.234
 Nmap scan report for 10.10.10.234
 Host is up (0.36s latency).
-
-PORT   STATE SERVICE
-80/tcp open  http
-| http-enum: 
-|   /css/: Potentially interesting folder w/ directory listing
-|   /images/: Potentially interesting folder w/ directory listing
-|_  /js/: Potentially interesting folder w/ directory listing
-
+/images <span class="o">(</span>Potentially interesting folder w/ directory listing<span class="o">)</span>
+/contact.html <span class="o">(</span>Status: 200<span class="o">)</span>
+/about.html <span class="o">(</span>Status: 200<span class="o">)</span>
+/css <span class="o">(</span>Potentially interesting folder w/ directory listing<span class="o">)</span>
+/js <span class="o">(</span>Potentially interesting folder w/ directory listing<span class="o">)</span>
+/fonts <span class="o">(</span>Status: 301<span class="o">)</span>
+/teachers.html <span class="o">(</span>Status: 200<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
 # Nmap done at Wed Sep 15 08:40:37 2021 -- 1 IP address (1 host up) scanned in 37.81 seconds
 </span>
 </div><p>Vemos en la pagina <code>/teachers.html</code> varios nombres y apellidos, lo cual podria servir para crear un diccionario de usuarios y/o contraseñas.<br />
