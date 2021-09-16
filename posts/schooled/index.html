@@ -1745,12 +1745,13 @@ PORT      STATE SERVICE
 80/tcp    open  http
 33060/tcp open  mysqlx
 
+<p> Luego pasamos el archivo "allPorts" a nuestra función "extractPorts", lo que hace esto es extraer los puertos que previamente escaneamos con <code>nmap</code>.<br />
+
 <span class="c1"># Nmap done at Wed Apr  7 02:06:44 2021 -- 1 IP address (1 host up) scanned in 104.58 seconds</span>
 <span class="c1"># Nmap 7.91 scan initiated Wed Apr  7 02:07:13 2021 as: nmap -p 22,80,33060 -sV -sC -oN serviceports 10.129.95.59</span>
 Nmap scan report <span class="k">for</span> 10.129.95.59 <span class="o">(</span>10.129.95.59<span class="o">)</span>
 Host is up <span class="o">(</span>0.084s latency<span class="o">)</span>.
 
-<p> Luego pasamos el archivo "allPorts" a nuestra función "extractPorts", lo que hace esto es extraer los puertos que previamente escaneamos con <code>nmap</code>.<br />
 
 PORT      STATE SERVICE VERSION
 22/tcp    open  ssh     OpenSSH 7.9 <span class="o">(</span>FreeBSD 20200214<span class="p">;</span> protocol 2.0<span class="o">)</span>
