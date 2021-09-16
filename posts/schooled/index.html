@@ -1735,7 +1735,7 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Nmap 7.91 scan initiated Wed Apr  7 02:04:59 2021 as: nmap -p- --min-rate 10000 -oN allports 10.129.95.59</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Nmap 7.92 scan initiated Wed Sep 15 07:51:29 2021 as: nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn -oG allPorts 10.10.10.234</span>
 Warning: 10.129.95.59 giving up on port because retransmission cap hit <span class="o">(</span>10<span class="o">)</span>.
 Nmap scan report <span class="k">for</span> 10.129.95.59 <span class="o">(</span>10.129.95.59<span class="o">)</span>
 Host is up <span class="o">(</span>0.093s latency<span class="o">)</span>.
@@ -1749,6 +1749,8 @@ PORT      STATE SERVICE
 <span class="c1"># Nmap 7.91 scan initiated Wed Apr  7 02:07:13 2021 as: nmap -p 22,80,33060 -sV -sC -oN serviceports 10.129.95.59</span>
 Nmap scan report <span class="k">for</span> 10.129.95.59 <span class="o">(</span>10.129.95.59<span class="o">)</span>
 Host is up <span class="o">(</span>0.084s latency<span class="o">)</span>.
+
+<p> Luego pasamos el archivo "allPorts" a nuestra función "extractPorts", lo que hace esto es extraer los puertos que previamente escaneamos con <code>nmap</code>.<br />
 
 PORT      STATE SERVICE VERSION
 22/tcp    open  ssh     OpenSSH 7.9 <span class="o">(</span>FreeBSD 20200214<span class="p">;</span> protocol 2.0<span class="o">)</span>
