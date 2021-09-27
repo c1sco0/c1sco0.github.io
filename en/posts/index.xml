@@ -7,8 +7,8 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Posts on c1sco0</title>
-    <link>https://sckull.github.io/en/posts/</link>
-    <description>Recent content in Posts on sckull</description>
+    <link>https://c1sco0.github.io/en/posts/</link>
+    <description>Recent content in Posts on c1sco0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©{year}, All Rights Reserved</copyright>
@@ -30,7 +30,7 @@
         <guid>https://c1sco0.github.io/en/posts/test/</guid>
         <description></description>
         <content:encoded></content:encoded>
-        <dc:creator>sckull</dc:creator>
+        <dc:creator>c1sco0</dc:creator>
         
         
         
