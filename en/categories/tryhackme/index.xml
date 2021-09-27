@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>tryhackme on sckull</title>
-    <link>https://sckull.github.io/en/categories/tryhackme/</link>
-    <description>Recent content in tryhackme on sckull</description>
+    <title>tryhackme on c1sco0</title>
+    <link>https://c1sco0.github.io/en/categories/tryhackme/</link>
+    <description>Recent content in tryhackme on c1sco0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©{year}, All Rights Reserved</copyright>
@@ -16,7 +16,7 @@
     <sy:updatePeriod>daily</sy:updatePeriod>
     <sy:updateFrequency>daily</sy:updateFrequency>
     
-        <atom:link href="https://sckull.github.io/en/categories/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://c1sco0.github.io/en/categories/tryhackme/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>TryHackMe - Agent Sudo</title>
-        <link>https://sckull.github.io/en/posts/agent_sudo/</link>
+        <link>https://c1sco0.github.io/en/posts/agent_sudo/</link>
         <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
         
         <atom:modified>Tue, 04 Feb 2020 00:00:00 +0000</atom:modified>
-        <guid>https://sckull.github.io/en/posts/agent_sudo/</guid>
+        <guid>https://c1sco0.github.io/en/posts/agent_sudo/</guid>
         <description>Titulo Agent Sudo     Room Agent Sudo   Info You found a secret server located under the deep sea.</description>
         <content:encoded>&lt;table&gt;
 &lt;thead&gt;
@@ -515,10 +515,10 @@ james@agent-sudo:~$
 &lt;p&gt;Descargamos el exploit, lo ejecutamos, obtenemos nuestra shell y nuestra flag &lt;strong&gt;root.txt&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../image/tryhackme/agentsudo/Screenshot_20200204_232719.webp&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 </content:encoded>
-        <dc:creator>sckull</dc:creator>
-        <media:content url="https://sckull.github.io/images/posts/blue/cover.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <dc:creator>c1sco0</dc:creator>
+        <media:content url="https://c1sco0.github.io/images/posts/blue/cover.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
-        <media:content url="https://sckull.github.io/images/posts/blue/cover.webp" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://c1sco0.github.io/images/posts/blue/cover.webp" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
