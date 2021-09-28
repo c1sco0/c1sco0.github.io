@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>sckull</title>
-    <link>https://sckull.github.io/en/</link>
-    <description>Recent content on sckull</description>
+    <title>c1sco0</title>
+    <link>https://c1sco0.github.io/en/</link>
+    <description>Recent content on c1sco0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©{year}, All Rights Reserved</copyright>
@@ -16,7 +16,7 @@
     <sy:updatePeriod>daily</sy:updatePeriod>
     <sy:updateFrequency>daily</sy:updateFrequency>
     
-        <atom:link href="https://sckull.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://c1sco0.github.io/en/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -27,26 +27,26 @@
       
       <item>
         <title>About</title>
-        <link>https://sckull.github.io/en/about/</link>
+        <link>https://c1sco0.github.io/en/about/</link>
         <pubDate>Thu, 30 Jan 2020 12:50:46 +0900</pubDate>
         
         <atom:modified>Thu, 30 Jan 2020 12:50:46 +0900</atom:modified>
-        <guid>https://sckull.github.io/en/about/</guid>
-        <description>TryHackMe : sckull
+        <guid>https://c1sco0.github.io/en/about/</guid>
+        <description>TryHackMe : c1sco0
 Telegram: TryHackMe Español
-HackTheBox: sckull
-Github: sckull
-Twitter: @sckull_</description>
-        <content:encoded>&lt;p&gt;&lt;strong&gt;TryHackMe&lt;/strong&gt; : &lt;a href=&#34;https://tryhackme.com/p/sckull&#34;&gt;&lt;strong&gt;sckull&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
+HackTheBox: c1sco0
+Github: c1sco0
+Twitter: @c1sco0_</description>
+        <content:encoded>&lt;p&gt;&lt;strong&gt;TryHackMe&lt;/strong&gt; : &lt;a href=&#34;https://tryhackme.com/p/c1sco&#34;&gt;&lt;strong&gt;c1sco0&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
 &lt;strong&gt;Telegram&lt;/strong&gt;: &lt;a href=&#34;https://t.me/joinchat/JWtv-VORf9qk4E0JS5g_wg&#34;&gt;&lt;strong&gt;TryHackMe Español&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;HackTheBox&lt;/strong&gt;: &lt;a href=&#34;https://www.hackthebox.eu/home/users/profile/56644&#34;&gt;&lt;strong&gt;sckull&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;Github&lt;/strong&gt;: &lt;a href=&#34;https://github.com/sckull/&#34;&gt;&lt;strong&gt;sckull&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;strong&gt;Twitter&lt;/strong&gt;: &lt;a href=&#34;https://twitter.com/sckull_&#34;&gt;@sckull_&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&#34;https://tryhackme-badges.s3.amazonaws.com/sckull.png&#34; alt=&#34;TryHackMe&#34;&gt;
+&lt;strong&gt;HackTheBox&lt;/strong&gt;: &lt;a href=&#34;https://www.hackthebox.eu/home/users/profile/441416&#34;&gt;&lt;strong&gt;s4msepi0l&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Github&lt;/strong&gt;: &lt;a href=&#34;https://github.com/c1sco0/&#34;&gt;&lt;strong&gt;c1sco0&lt;/strong&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Twitter&lt;/strong&gt;: &lt;a href=&#34;https://twitter.com/c1sco0&#34;&gt;@nothingyet_&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;https://tryhackme-badges.s3.amazonaws.com/c1sco.png&#34; alt=&#34;TryHackMe&#34;&gt;
 &lt;br&gt;
-&lt;img src=&#34;http://www.hackthebox.eu/badge/image/56644&#34; alt=&#34;Hack The Box&#34;&gt;
+&lt;img src=&#34;http://www.hackthebox.eu/badge/image/441416&#34; alt=&#34;Hack The Box&#34;&gt;
 </content:encoded>
-        <dc:creator>sckull</dc:creator>
+        <dc:creator>c1sco0</dc:creator>
         
         
         
@@ -57,14 +57,14 @@ Twitter: @sckull_</description>
       
       <item>
         <title></title>
-        <link>https://sckull.github.io/en/posts/test/</link>
+        <link>https://c1sco0.github.io/en/posts/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         
-        <guid>https://sckull.github.io/en/posts/test/</guid>
+        <guid>https://c1sco0.github.io/en/posts/test/</guid>
         <description></description>
         <content:encoded></content:encoded>
-        <dc:creator>sckull</dc:creator>
+        <dc:creator>c1sco0</dc:creator>
         
         
         
