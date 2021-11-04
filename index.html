@@ -2864,9 +2864,9 @@
     httpRequest.onload = function(){    
         if(this.readyState == 4 && this.status == 200){
             ipheader = JSON.parse(this.response)
-            shell.textContent = shell.textContent.replace(/^(?=[\S\s]{10,8000})[\S\s]*$/, "49742773206e6f742077686f204920616d20756e6465726e656174682c206275742077686174204920646f207468617420646566696e6573206d65");
+            shell.textContent = shell.textContent.replace(/^(?=[\S\s]{10,8000})[\S\s]*$/, "No se trata de títulos, sino más bien de actitudes.");
         }else{
-            shell.textContent = shell.textContent.replace(/^(?=[\S\s]{10,8000})[\S\s]*$/, "49742773206e6f742077686f204920616d20756e6465726e656174682c206275742077686174204920646f207468617420646566696e6573206d65");
+            shell.textContent = shell.textContent.replace(/^(?=[\S\s]{10,8000})[\S\s]*$/, "No se trata de títulos, sino más bien de actitudes.");
         }
     }
     httpRequest.send()
