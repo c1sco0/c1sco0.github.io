@@ -1229,7 +1229,7 @@
 
 
     
-<meta name="description" content="Irked tiene expuesto el puerto de UnrealIRCd el cual tiene un backdoor, lo que nos dio acceso a la maquina. El siguiente usuario lo obtuvimos por medio de un reto de Esteganografia. Escalamos privilegios mediante un fichero el cual ejecutaba un script donde agregamos una shell inversa." />
+<meta name="description" content="Irked tiene expuesto el puerto de UnrealIRCd el cual contiene un backdoor, gracias a esto conseguimos acceder a la máquina. El acceso al usuario ircd lo obtuvimos por medio de esteganografía. Por consiguiente, escalamos privilegios mediante un fichero el cual lo ejecutaba el usuario root, por medio de este le otorgamos permisos SUID a la /bin/bash y voilá." />
 
 
 <meta name="keywords" content="UnrealIRC,metasploit,steganography,steghide,suid">
@@ -1246,7 +1246,7 @@
 <meta property="og:title" content="Hack The Box - Irked">
 <meta property="og:url" content="https://sckull.github.io/posts/irked/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="Irked tiene expuesto el puerto de UnrealIRCd el cual tiene un backdoor, lo que nos dio acceso a la maquina. El siguiente usuario lo obtuvimos por medio de un reto de Esteganografia. Escalamos privilegios mediante un fichero el cual ejecutaba un script donde agregamos una shell inversa.">
+<meta property="og:description" content="Irked tiene expuesto el puerto de UnrealIRCd el cual contiene un backdoor, gracias a esto conseguimos acceder a la máquina. El acceso al usuario ircd lo obtuvimos por medio de esteganografía. Por consiguiente, escalamos privilegios mediante un fichero el cual lo ejecutaba el usuario root, por medio de este le otorgamos permisos SUID a la /bin/bash y voilá.">
 
   
     <meta property="og:image" content="https://sckull.github.io/images/posts/htb/irked/cover.webp">
@@ -1254,7 +1254,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="sckull">
     <meta property="twitter:title" content="Hack The Box - Irked">
-    <meta property="twitter:description" content="Irked tiene expuesto el puerto de UnrealIRCd el cual tiene un backdoor, lo que nos dio acceso a la maquina. El siguiente usuario lo obtuvimos por medio de un reto de Esteganografia. Escalamos privilegios mediante un fichero el cual ejecutaba un script donde agregamos una shell inversa.">
+    <meta property="twitter:description" content="Irked tiene expuesto el puerto de UnrealIRCd el cual contiene un backdoor, gracias a esto conseguimos acceder a la máquina. El acceso al usuario ircd lo obtuvimos por medio de esteganografía. Por consiguiente, escalamos privilegios mediante un fichero el cual lo ejecutaba el usuario root, por medio de este le otorgamos permisos SUID a la /bin/bash y voilá.">
   
 
 <meta name="generator" content="Hugo 0.80.0" />
@@ -1284,7 +1284,7 @@
     "datePublished": "2019-04-20T00:00:00Z",
     "dateModified": "2019-04-20T00:00:00Z",
     "url" : "https://sckull.github.io/posts/irked/",
-    "description": "Irked tiene expuesto el puerto de UnrealIRCd el cual tiene un backdoor, lo que nos dio acceso a la maquina. El siguiente usuario lo obtuvimos por medio de un reto de Esteganografia. Escalamos privilegios mediante un fichero el cual ejecutaba un script donde agregamos una shell inversa.",
+    "description": "Irked tiene expuesto el puerto de UnrealIRCd el cual contiene un backdoor, gracias a esto conseguimos acceder a la máquina. El acceso al usuario ircd lo obtuvimos por medio de esteganografía. Por consiguiente, escalamos privilegios mediante un fichero el cual lo ejecutaba el usuario root, por medio de este le otorgamos permisos SUID a la /bin/bash y voilá.",
     "keywords": ["UnrealIRC","metasploit","steganography","steghide","suid"],
     "image" : "https://sckull.github.io/images/posts/htb/irked/cover.webp",
     "author": {
@@ -1813,7 +1813,7 @@ Nmap <span class="k">done</span>: <span class="m">1</span> IP address <span clas
 </code></pre></td></tr></table>
 </div>
 </div><h1 id="shell---unrealircd">SHELL - UnrealIRCd</h1>
-<p>Para UnrealIRCd existe un backdoor el cual se puede explotar mediante un exploit existente en metasploit quiza el mensaje de la pagina principal se referia a esta vulnerabilidad, vamos configuramos el exploit.</p>
+<p>Para UnrealIRCd existe un backdoor se puede explotar mediante un exploit que podemos visualizar si typeamos searchsploit UnrealIRCd, vemos que hay un exploit disponible en metasploit, pero en este caso nosotros seguiremos la técnica OSCP like, por lo tanto omitiremos este exploit y buscaremos uno en línea, en efecto hay un exploit desarrollado por Ranger11Dangerrincipal. </p>
 <h2 id="exploit">Exploit</h2>
 <p><img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2020.34.57.webp" alt="image" /><br />
 <img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2020.35.31.webp" alt="image" /></p>
