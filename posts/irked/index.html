@@ -1816,7 +1816,6 @@ Nmap <span class="k">done</span>: <span class="m">1</span> IP address <span clas
 <p>Para UnrealIRCd existe un backdoor se puede explotar mediante un exploit que podemos visualizar si typeamos searchsploit UnrealIRCd, vemos que hay un exploit disponible en metasploit, pero en este caso nosotros seguiremos la técnica OSCP like, por lo tanto omitiremos este exploit y buscaremos uno en línea, en efecto hay un exploit desarrollado por Ranger11Danger. </p>
 <h2 id="exploit">Exploit</h2>
 <p><img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2020.34.57.webp" alt="image" /><br />
-<img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2020.35.31.webp" alt="image" /></p>
 <p>Obtenemos una Shell con el exploit<br />
 <img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2020.40.18.webp" alt="image" /></p>
 <p>En el directorio principal carpeta Documents encontramos un archivo llamado <code>.backup</code> con un mensaje y una frase, el mensaje habla acerca de <code>steg</code> que se puede referir a steganography pero no encontramos ninguna imagen en los directorios, en la pagina principal se encuentra una imagen vamos a utilizarla para extraer informacion que pueda esconder dentro.<br />
