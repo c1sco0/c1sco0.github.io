@@ -1840,7 +1840,7 @@ UPupDOWNdownLRlrBAbaSSss
 <p>Buscamos archivos SUID para escalar privilegios</p>
 <p><img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2021.10.40.webp" alt="image" /></p>
 <p>Encontramos un archivo <code>/usr/bin/viewuser</code> que al ejecutarlo nos envia un error donde <code>/tmp/listusers</code> no existe.</p>
-<p>Para obtener una shell root agregamos una shell inversa al archivo que no existe, damos permisos al archivo y lo ejecutamos.</p>
+<p>Para obtener una shell root le asignamos permisos SUID a la /bin/bash al archivo que no existe, damos permisos de ejecución al archivo y lo ejecutamos.</p>
 <p><img src="/images/posts/htb/irked/Screenshot%20from%202019-04-25%2021.24.02.webp" alt="image" /><br />
 Obtenemos nuestra shell root y nuestra bandera <code>root.txt</code>.</p>
 
